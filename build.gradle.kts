@@ -1,3 +1,7 @@
+val databaseUrl = properties["databaseUrl"] as String
+val databaseUser = properties["databaseUsername"] as String
+val databasePassword = properties["databasePassword"] as String
+
 plugins {
     id("org.liquibase.gradle") version "2.0.4"
 }
@@ -13,6 +17,16 @@ repositories {
     mavenCentral()
 }
 
-liquibase {
+apply(plugin = "org.liquibase.gradle")
 
+liquibase {
+    activities.register("main") {
+        this.arguments = mapOf(
+            "logLevel" to "info",
+            "changeLogFile" to "migrations/changeLog.xml",
+            "url" to databaseUrl,
+            "username" to databaseUser,
+            "password" to databasePassword
+        )
+    }
 }
