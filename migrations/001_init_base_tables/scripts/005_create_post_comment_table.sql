@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS post_comments (
-    id BIGINT PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     post_id BIGINT NOT NULL REFERENCES posts(id),
     text TEXT NOT NULL,
     is_deleted BOOLEAN NOT NULL DEFAULT FALSE,

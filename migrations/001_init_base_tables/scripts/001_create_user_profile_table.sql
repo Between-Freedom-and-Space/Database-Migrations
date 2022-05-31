@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS user_profiles (
-    id BIGINT PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     mail TEXT DEFAULT NULL,
     phone_number TEXT DEFAULT NULL,
     password_encrypted TEXT NOT NULL,
