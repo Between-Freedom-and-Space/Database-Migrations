@@ -6,6 +6,6 @@ CREATE TABLE IF NOT EXISTS posts (
     is_deleted BOOLEAN NOT NULL DEFAULT FALSE,
     is_edited BOOLEAN NOT NULL DEFAULT FALSE,
     author_user_id BIGINT NOT NULL REFERENCES user_profiles(id),
-    created_date DATE NOT NULL,
-    updated_date DATE NOT NULL
+    created_date TIMESTAMP NOT NULL,
+    updated_date TIMESTAMP NOT NULL
 );

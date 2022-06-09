@@ -4,6 +4,6 @@ CREATE TABLE IF NOT EXISTS post_tags (
     tag_alias VARCHAR(255) NOT NULL UNIQUE,
     tag_description TEXT,
     is_deleted BOOLEAN NOT NULL DEFAULT FALSE,
-    created_date DATE NOT NULL,
-    updated_date DATE NOT NULL
+    created_date TIMESTAMP NOT NULL,
+    updated_date TIMESTAMP NOT NULL
 )

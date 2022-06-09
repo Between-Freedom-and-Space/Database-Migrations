@@ -4,6 +4,6 @@ CREATE TABLE IF NOT EXISTS post_comments (
     text TEXT NOT NULL,
     is_deleted BOOLEAN NOT NULL DEFAULT FALSE,
     author_user_id BIGINT NOT NULL REFERENCES user_profiles(id),
-    created_date DATE NOT NULL,
-    updated_date DATE NOT NULL
+    created_date TIMESTAMP NOT NULL,
+    updated_date TIMESTAMP NOT NULL
 );

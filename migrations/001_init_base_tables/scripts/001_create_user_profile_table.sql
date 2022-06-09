@@ -9,6 +9,6 @@ CREATE TABLE IF NOT EXISTS user_profiles (
     location TEXT DEFAULT NULL,
     is_deleted BOOLEAN NOT NULL DEFAULT FALSE,
     is_visible BOOLEAN NOT NULL DEFAULT TRUE,
-    created_date DATE NOT NULL,
-    updated_date DATE NOT NULL
+    created_date TIMESTAMP NOT NULL,
+    updated_date TIMESTAMP NOT NULL
 );
