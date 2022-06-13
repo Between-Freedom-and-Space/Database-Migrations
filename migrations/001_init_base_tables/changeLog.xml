@@ -12,13 +12,12 @@
     <changeSet id="1" author="Ferum-bot" labels="Init base service tables with base columns">
         <sqlFile path="migrations/001_init_base_tables/scripts/001_create_user_profile_table.sql"/>
         <sqlFile path="migrations/001_init_base_tables/scripts/002_create_post_table.sql"/>
-        <sqlFile path="migrations/001_init_base_tables/scripts/003_create_reaction_type.sql"/>
-        <sqlFile path="migrations/001_init_base_tables/scripts/004_create_post_reaction_table.sql"/>
-        <sqlFile path="migrations/001_init_base_tables/scripts/005_create_post_comment_table.sql"/>
-        <sqlFile path="migrations/001_init_base_tables/scripts/006_create_comment_reaction_table.sql"/>
-        <sqlFile path="migrations/001_init_base_tables/scripts/007_create_post_tag_table.sql"/>
-        <sqlFile path="migrations/001_init_base_tables/scripts/008_create_user_subscription_table.sql"/>
-        <sqlFile path="migrations/001_init_base_tables/scripts/009_create_post_settings_table.sql"/>
-        <sqlFile path="migrations/001_init_base_tables/scripts/010_create_post_to_tag_table.sql"/>
+        <sqlFile path="migrations/001_init_base_tables/scripts/003_create_post_reaction_table.sql"/>
+        <sqlFile path="migrations/001_init_base_tables/scripts/004_create_post_comment_table.sql"/>
+        <sqlFile path="migrations/001_init_base_tables/scripts/005_create_comment_reaction_table.sql"/>
+        <sqlFile path="migrations/001_init_base_tables/scripts/006_create_post_tag_table.sql"/>
+        <sqlFile path="migrations/001_init_base_tables/scripts/007_create_user_subscription_table.sql"/>
+        <sqlFile path="migrations/001_init_base_tables/scripts/008_create_post_settings_table.sql"/>
+        <sqlFile path="migrations/001_init_base_tables/scripts/009_create_post_to_tag_table.sql"/>
     </changeSet>
 </databaseChangeLog>
