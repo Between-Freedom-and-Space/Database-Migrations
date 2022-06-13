@@ -15,4 +15,9 @@ Migrations are easily customizable in `changeLog.xml` files.
 * Run file `run.sh`
 * Enjoy
 
+## Structure:
+* Folder [migrations](./migrations) contains all scripts
+* Folder [000_drop_all_data](./migrations/000_drop_all_data) contains drop scripts to empty database.
+* Other folders contains migrations scripts.
+
 #### Created and Powered by Ferum-bot.
