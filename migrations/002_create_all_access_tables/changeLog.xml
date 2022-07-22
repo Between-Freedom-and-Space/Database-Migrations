@@ -14,5 +14,6 @@
         <sqlFile path="migrations/002_create_all_access_tables/scripts/003_create_access_settings_table.sql"/>
         <sqlFile path="migrations/002_create_all_access_tables/scripts/004_create_accessed_rules_table.sql"/>
         <sqlFile path="migrations/002_create_all_access_tables/scripts/005_create_accessed_users_table.sql"/>
+        <sqlFile path="migrations/002_create_all_access_tables/scripts/006_insert_base_user_roles.sql"/>
     </changeSet>
 </databaseChangeLog>

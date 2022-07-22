@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS user_role (
     id BIGSERIAL PRIMARY KEY,
-    role_alias INT NOT NULL,
+    role_alias VARCHAR NOT NULL UNIQUE,
     created_date TIMESTAMP NOT NULL,
     updated_date TIMESTAMP NOT NULL
 );
