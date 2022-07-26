@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up JDK 17
+      - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: 17
+          java-version: 8
           distribution: 'adopt'
       - name: Validate Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1.0.4
