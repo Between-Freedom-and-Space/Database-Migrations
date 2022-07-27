@@ -9,16 +9,30 @@ jobs:
     environment: testing
     steps:
       - uses: actions/checkout@v3
+      
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           java-version: 8
           distribution: 'adopt'
+          
       - name: Validate Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1.0.4
-      - name: Build Gradle
+        
+      - name: Saving ssl certificate to file
+        id: save-db-ssl-certificate
+        uses: rayhu/save-secret-as-file@v1
+        with:
+          secret: ${{secrets.DATABASE_SSL_CERTIFICATE}}
+          filename: database_ssl_certificate.cert
+        
+      - name: Migrate Gradle task
         uses: gradle/gradle-build-action@v2.2.2
         with:
-          arguments: update -PdatabaseUrl=${{secrets.DATABASE_URL}} -PdatabaseUsername=${{secrets.DATABASE_USER}} -PdatabasePassword=${{secrets.DATABASE_PASSWORD}}
-
+          arguments: |
+            update 
+            -PdatabaseUrl=${{secrets.DATABASE_URL}} 
+            -PdatabaseUsername=${{secrets.DATABASE_USER}} 
+            -PdatabasePassword=${{secrets.DATABASE_PASSWORD}}
+            -Psslrootcert=${{ steps.save-db-ssl-certificate.outputs.filename }}
           
