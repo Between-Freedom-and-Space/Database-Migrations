@@ -16,7 +16,7 @@ jobs:
           distribution: 'adopt'
       - name: Validate Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1.0.4
-      - name: Build Gradle
+      - name: Migrate Gradle task
         uses: gradle/gradle-build-action@v2.2.2
         with:
           arguments: update -PdatabaseUrl=${{secrets.DATABASE_URL}} -PdatabaseUsername=${{secrets.DATABASE_USER}} -PdatabasePassword=${{secrets.DATABASE_PASSWORD}}
