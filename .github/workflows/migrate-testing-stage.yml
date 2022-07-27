@@ -19,6 +19,6 @@ jobs:
       - name: Build Gradle
         uses: gradle/gradle-build-action@v2.2.2
         with:
-          arguments: update -Purl=${{secrets.DATABASE_URL}} -Pusername=${{secrets.DATABASE_USER}} -Ppassword=${{secrets.DATABASE_PASSWORD}} -PdatabaseUrl=${{secrets.DATABASE_URL}} -PdatabaseUsername=${{secrets.DATABASE_USER}} -PdatabasePassword=${{secrets.DATABASE_PASSWORD}}
+          arguments: update -PdatabaseUrl=${{secrets.DATABASE_URL}} -PdatabaseUsername=${{secrets.DATABASE_USER}} -PdatabasePassword=${{secrets.DATABASE_PASSWORD}}
 
           
