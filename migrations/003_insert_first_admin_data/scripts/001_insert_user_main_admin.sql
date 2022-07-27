@@ -7,11 +7,13 @@ BEGIN
     SELECT id FROM user_role WHERE role_alias = 'SUPER_ADMIN' LIMIT 1 INTO super_admin_role_id;
 
     IF main_admin_user_id IS NULL THEN
-        RAISE EXCEPTION 'Ferum-bot is not registered is system';
+        RAISE NOTICE 'Ferum-bot is not registered is system';
+        RETURN;
     END IF;
 
     IF super_admin_role_id IS NULL THEN
-        RAISE EXCEPTION 'SUPER_ADMIN role does not exists in database';
+        RAISE NOTICE 'SUPER_ADMIN role does not exists in database';
+        RETURN;
     END IF;
 
     INSERT INTO user_to_user_roles (role_id, user_id, created_date, updated_date)

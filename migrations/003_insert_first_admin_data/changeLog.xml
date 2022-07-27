@@ -9,6 +9,6 @@
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.xsd">
     <changeSet id="2" author="Ferum-bot">
-        <sqlFile path="migrations/003_insert_first_admin_data/scripts/001_insert_user_main_admin.sql"/>
+        <sqlFile path="migrations/003_insert_first_admin_data/scripts/001_insert_user_main_admin.sql" splitStatements="false"/>
     </changeSet>
 </databaseChangeLog>
