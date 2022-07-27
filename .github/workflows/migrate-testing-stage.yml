@@ -24,7 +24,7 @@ jobs:
         uses: rayhu/save-secret-as-file@v1
         with:
           secret: ${{secrets.DATABASE_SSL_CERTIFICATE}}
-          filename: database_ssl_certificate
+          filename: database_ssl_certificate.cert
         
       - name: Migrate Gradle task
         uses: gradle/gradle-build-action@v2.2.2
