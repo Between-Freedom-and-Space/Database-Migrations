@@ -1,0 +1,1 @@
+DROP PROCEDURE IF EXISTS insert_main_admin CASCADE;

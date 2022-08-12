@@ -19,5 +19,6 @@
         <sqlFile path="migrations/001_init_base_tables/scripts/007_create_user_subscription_table.sql"/>
         <sqlFile path="migrations/001_init_base_tables/scripts/008_create_post_settings_table.sql"/>
         <sqlFile path="migrations/001_init_base_tables/scripts/009_create_post_to_tag_table.sql"/>
+        <sqlFile path="migrations/001_init_base_tables/scripts/010_create_profile_icons_table.sql"/>
     </changeSet>
 </databaseChangeLog>
