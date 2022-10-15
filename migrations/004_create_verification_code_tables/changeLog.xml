@@ -8,9 +8,8 @@
 		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.xsd">
-
-    <include file="migrations/001_init_base_tables/changeLog.xml"/>
-    <include file="migrations/002_create_all_access_tables/changeLog.xml"/>
-    <include file="migrations/003_insert_first_admin_data/changeLog.xml"/>
-    <include file="migrations/004_create_verification_code_tables/changeLog.xml"/>
+    <changeSet id="4" author="Ferum-bot" labels="Create verification tables and constraints">
+        <sqlFile path="migrations/004_create_verification_code_tables/scripts/001_add_unique_constraints.sql" splitStatements="false"/>
+        <sqlFile path="migrations/004_create_verification_code_tables/scripts/002_create_verification_code_table.sql" splitStatements="false"/>
+    </changeSet>
 </databaseChangeLog>
